@@ -1,3 +1,5 @@
+/* eslint react/jsx-pascal-case: "off" */
+
 import * as React from "react"
 
 import Layout from "../components/layout"

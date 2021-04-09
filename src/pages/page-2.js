@@ -1,3 +1,5 @@
+/* eslint react/jsx-pascal-case: "off" */
+
 import * as React from "react"
 import { Link } from "gatsby"
 
