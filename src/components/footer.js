@@ -14,7 +14,9 @@ const Footer = () => {
         <a
           style={{ fontFamily: 'var(--font-title)' }}
           href="https://allydigitalsolutions.com"
-        >Built By Ally Digital Solutions</a>
+        >
+          Built By Ally Digital Solutions
+        </a>
       </div>
     </>
   )
@@ -49,7 +51,7 @@ const Wrapper = styled.footer`
   @media (min-width: 776px) {
     flex-direction: row;
   }
-  & + div.ally{
+  & + div.ally {
     background: var(--clr-black);
     color: var(--clr-primary-9);
     font-size: 0.8rem;
@@ -57,7 +59,7 @@ const Wrapper = styled.footer`
     padding-bottom: 2rem;
     text-align: center;
   }
-  & + div.ally a{
+  & + div.ally a {
     color: var(--clr-primary-9);
     font-size: 0.7rem;
   }

@@ -1,10 +1,5 @@
-import React from "react"
+import React from 'react'
 
-
-export const wrapRootElement = ({element}) => {
-  return (
-    <>
-      {element}
-    </>
-  )
+export const wrapRootElement = ({ element }) => {
+  return <>{element}</>
 }
