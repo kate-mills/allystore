@@ -7,7 +7,6 @@ import CartButtons from './CartButtons'
 import { useNavigationContext } from '../context/navigation_context'
 import { StaticImage } from 'gatsby-plugin-image'
 
-
 const Nav = () => {
   const { openSidebar } = useProductsContext()
   return (
