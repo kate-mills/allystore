@@ -1,16 +1,40 @@
 /* eslint react/jsx-pascal-case: "off" */
 
 import * as React from "react"
+import { Link } from 'gatsby'
+import styled from 'styled-components'
+import {SEO, Layout} from "../components"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-
-const NotFoundPage = () => (
+const ErrorPage = () => {
+  return (
   <Layout>
-    <SEO title="404: Not found" />
-    <h1>404: Not Found</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </Layout>
-)
+    <SEO title="Opps!" />
+      <Wrapper className="page-100">
+        <section>
+          <h1>Oops!</h1>
+          <h3>Sorry, the page you tried cannot be found.</h3>
+          <Link to="/" className="btn">
+            Back Home
+          </Link>
+        </section>
+      </Wrapper>
+    </Layout>
+  )
+}
 
-export default NotFoundPage
+const Wrapper = styled.main`
+  background: var(--clr-primary-10);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  h1 {
+    font-size: 5rem;
+  }
+  h3 {
+    text-transform: none;
+    margin-bottom: 2rem;
+  }
+`
+
+export default ErrorPage
