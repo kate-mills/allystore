@@ -1,6 +1,11 @@
-import React from 'react'
-import { NavigationProvider } from './src/context/navigation_context'
+import React from "react"
 
-export const wrapRootElement = ({ element }) => {
-  return <NavigationProvider>{element}</NavigationProvider>
+import { AppProvider } from './src/context/app_context';
+
+export const wrapRootElement = ({element}) => {
+  return (
+    <AppProvider>
+      {element}
+    </AppProvider>
+  )
 }

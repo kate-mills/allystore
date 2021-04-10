@@ -5,17 +5,23 @@ export const links = [
   {
     id: 1,
     text: 'home',
+    page: 'home',
     url: '/',
+    links:[],
   },
   {
     id: 2,
     text: 'about',
+    page: 'about',
     url: '/about',
+    links:[],
   },
   {
     id: 3,
     text: 'shop',
+    page: 'shop',
     url: '/shop',
+    links:[],
   },
 ]
 

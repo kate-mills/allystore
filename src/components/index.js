@@ -1,4 +1,7 @@
 import Layout from './layout'
 import SEO from './seo'
 
-export { Layout, SEO }
+export {
+  Layout,
+  SEO,
+}

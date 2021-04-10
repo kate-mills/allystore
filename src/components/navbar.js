@@ -1,14 +1,14 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import { FaBars } from 'react-icons/fa'
-import { Link } from 'gatsby'
-import { links } from '../utils/constants'
-import CartButtons from './CartButtons'
-import { useNavigationContext } from '../context/navigation_context'
 import { StaticImage } from 'gatsby-plugin-image'
+import { Link } from 'gatsby'
+import { FaBars } from 'react-icons/fa'
 
-const Nav = () => {
-  const { openSidebar } = useProductsContext()
+import { links } from '../utils/constants'
+//import { useNavContext } from '../context/navigation_context'
+
+const Navbar = () => {
+  //const { openSidebar } = useNavContext()
   return (
     <NavContainer>
       <div className="nav-center">
@@ -21,14 +21,12 @@ const Nav = () => {
               alt="Logo"
               width={67}
             />
-            {/* https://www.iconfinder.com/icons/3249825/health_treatment_illustration_hair_beauty_icon Creative Commons Attribution 2.5 Generic (CC BY 2.5) https://www.iconfinder.com/rizal999 */}
           </Link>
-
           <button
             type="button"
             className="nav-toggle"
-            onClick={openSidebar}
-            onKeyPress={openSidebar}
+            onClick={()=>console.log('click')}
+            onKeyPress={()=>console.log('click')}
             aria-label="Open sidebar"
           >
             <FaBars />
@@ -44,7 +42,6 @@ const Nav = () => {
             )
           })}
         </ul>
-        <CartButtons />
       </div>{' '}
       {/* close nav-center */}
     </NavContainer>
@@ -56,7 +53,6 @@ const NavContainer = styled.nav`
   display: flex;
   align-items: center;
   justify-content: center;
-
   .nav-center {
     width: 90vw;
     margin: 0 auto;
@@ -119,4 +115,4 @@ const NavContainer = styled.nav`
   }
 `
 
-export default Nav
+export default Navbar

@@ -1,6 +1,6 @@
 import { SIDEBAR_OPEN, SIDEBAR_CLOSE } from '../actions'
 
-const products_reducer = (state, action) => {
+const navigation_reducer = (state, action) => {
   if (action.type === SIDEBAR_OPEN) {
     return { ...state, isSidebarOpen: true }
   }
@@ -10,4 +10,4 @@ const products_reducer = (state, action) => {
   throw new Error(`No Matching "${action.type}" - action type`)
 }
 
-export default products_reducer
+export default navigation_reducer
