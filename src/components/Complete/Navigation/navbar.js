@@ -33,11 +33,7 @@ const Navbar = ({ toggleSidebar }) => {
               width={67}
             />
           </Link>
-          <button
-            type="button"
-            className="nav-toggle"
-            onClick={toggleSidebar}
-          >
+          <button type="button" className="nav-toggle" onClick={toggleSidebar}>
             <FaBars />
           </button>
           <NavSubmenu />
@@ -53,7 +49,7 @@ const Navbar = ({ toggleSidebar }) => {
             )
           })}
         </ul>
-        <CartButtons/>
+        <CartButtons />
       </div>
     </NavContainer>
   )

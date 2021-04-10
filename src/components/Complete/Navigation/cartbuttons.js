@@ -34,7 +34,6 @@ const CartButtonWrapper = styled.div`
     grid-template-columns: 1fr 1fr;
     width: 225px;
   }
-  
 
   .cart-btn {
     color: var(--clr-black);
