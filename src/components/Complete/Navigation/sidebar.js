@@ -46,8 +46,6 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
               </li>
             )
           })}
-          <li className="tel-wrapper">PhoneNumber</li>
-          <li></li>
         </ul>
       </aside>
     </SidebarContainer>
@@ -64,7 +62,7 @@ const SidebarContainer = styled.div`
   .close-sidebar-btn {
     background: transparent;
     border-color: transparent;
-    color: var(--black);
+    color: var(--clr-primary-5);
     cursor: pointer;
     font-size: 2rem;
     outline: none;
@@ -87,7 +85,8 @@ const SidebarContainer = styled.div`
     text-align: left;
     font-size: 1rem;
     text-transform: capitalize;
-    padding: 1rem 1.5rem;
+    padding: 1rem;
+    margin-left: 1.5rem;
     margin-right: 1.5rem;
     color: var(--black);
     transition: var(--transition);
@@ -96,7 +95,7 @@ const SidebarContainer = styled.div`
   .links a:hover {
     padding: 1rem 1.5rem;
     padding-left: 2rem;
-    background: pink;
+    background: var(--clr-primary-11);
     color: var(--black);
   }
   .sidebar {
@@ -111,12 +110,9 @@ const SidebarContainer = styled.div`
     z-index: -1;
   }
   .show-sidebar {
+    background: var(--clr-primary-9);
     transform: translate(0);
     z-index: 999;
-  }
-  .tel-wrapper {
-    text-align: left;
-    margin: 1rem 1.5rem;
   }
   @media screen and (min-width: 992px) {
     .sidebar {

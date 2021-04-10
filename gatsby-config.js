@@ -45,5 +45,5 @@ module.exports = {
       resolve: `gatsby-plugin-styled-components`,
     },
   ],
-  flags: { DEV_SSR: false },
 }
+//flags: { DEV_SSR: false },

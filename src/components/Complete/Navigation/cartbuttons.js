@@ -3,12 +3,12 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 import { FaShoppingCart, FaUserPlus } from 'react-icons/fa'
 
-import { useAppContext } from '../../../context/navigation_context'
+import { useGlobalContext } from '../../../context/app_context'
 
-const CartButtons = className => {
-  const { closeSidebar } = useAppContext()
+const CartButtons = () => {
+  const { closeSidebar } = useGlobalContext()
   return (
-    <div className={`${className} cart-btn-wrapper`}>
+    <CartButtonWrapper className={`cart-btn-wrapper`}>
       {/* Shopping Cart*/}
       <Link to="/cart" className="cart-btn" onClick={closeSidebar}>
         Cart
@@ -23,22 +23,24 @@ const CartButtons = className => {
         Login
         <FaUserPlus />
       </button>
-    </div>
+    </CartButtonWrapper>
   )
 }
 
-export default styled(CartButtons)`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  width: 225px;
+const CartButtonWrapper = styled.div`
+  & {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 225px;
+  }
+  
 
   .cart-btn {
     color: var(--clr-black);
     font-size: 1.5rem;
     letter-spacing: var(--spacing);
     display: flex;
-
     align-items: center;
   }
   .cart-container {
@@ -79,3 +81,4 @@ export default styled(CartButtons)`
     }
   }
 `
+export default CartButtons

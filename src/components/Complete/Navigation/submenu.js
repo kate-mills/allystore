@@ -49,8 +49,8 @@ const SubmenuWrapper = styled.aside`
     z-index: 1;
   }
   &.submenu.hide {
-    display: unset;
-  } /*none*/
+    display: none;
+  }
   &.submenu.show {
     display: unset;
   }

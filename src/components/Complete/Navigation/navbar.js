@@ -5,11 +5,12 @@ import { StaticImage } from 'gatsby-plugin-image'
 import { FaBars } from 'react-icons/fa'
 import { Link } from 'gatsby'
 import { links } from '../../../utils/constants'
+import CartButtons from './cartbuttons'
 import { useGlobalContext } from '../../../context/app_context'
 
 import NavSubmenu from './submenu'
 
-const Nav = ({ toggleSidebar }) => {
+const Navbar = ({ toggleSidebar }) => {
   const { openSubmenu } = useGlobalContext()
   const displaySubmenu = e => {
     const page_name = e.target.textContent // I get this text
@@ -34,8 +35,7 @@ const Nav = ({ toggleSidebar }) => {
           </Link>
           <button
             type="button"
-            aria-label="Open sidebar"
-            className="nav-opener"
+            className="nav-toggle"
             onClick={toggleSidebar}
           >
             <FaBars />
@@ -52,8 +52,8 @@ const Nav = ({ toggleSidebar }) => {
               </li>
             )
           })}
-          <li>Phone Number</li>
         </ul>
+        <CartButtons/>
       </div>
     </NavContainer>
   )
@@ -77,9 +77,9 @@ const NavContainer = styled.nav`
       height: 67px;
     }
   }
-  .nav-toggle {
+  & .nav-toggle {
     background: transparent;
-    border: transparent;
+    border: none;
     color: var(--clr-primary-5);
     cursor: pointer;
     svg {
@@ -125,4 +125,5 @@ const NavContainer = styled.nav`
     }
   }
 `
-export default Nav
+
+export default Navbar
