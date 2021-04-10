@@ -22,13 +22,13 @@ export const links = [
     page: 'shop',
     url: '/shop',
     links: [
-     {
-        text: "Shop by Product Type",
-        url: "/product-type/",
-      }, 
       {
-        text: "Shop by Skin Type",
-        url: "/skin-type/"
+        text: 'Shop by Product Type',
+        url: '/product-type/',
+      },
+      {
+        text: 'Shop by Skin Type',
+        url: '/skin-type/',
       },
     ],
   },

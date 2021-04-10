@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react'
 import styled from 'styled-components'
-import {Link} from 'gatsby'
+import { Link } from 'gatsby'
 import { useGlobalContext } from '../../../context/app_context'
 
 const Submenu = () => {
@@ -20,22 +20,21 @@ const Submenu = () => {
   }, [page, location, links])
 
   return (
-   <SubmenuWrapper
+    <SubmenuWrapper
       className={`${isSubmenuOpen ? `submenu show` : `submenu hide`}`}
-      ref={container}>
-        <ul className={`submenu-center columns`}>{links.map((link, index) => {
-            const {url, text } = link
-            return (
-              <li key={index}>
-                <Link
-                  to={url}
-                  className={`sublink`}
-                  onClick={closeSubmenu}>
-                  {text}
-                </Link>
-              </li>
-            )
-          })}
+      ref={container}
+    >
+      <ul className={`submenu-center columns`}>
+        {links.map((link, index) => {
+          const { url, text } = link
+          return (
+            <li key={index}>
+              <Link to={url} className={`sublink`} onClick={closeSubmenu}>
+                {text}
+              </Link>
+            </li>
+          )
+        })}
       </ul>
     </SubmenuWrapper>
   )
@@ -49,12 +48,16 @@ const SubmenuWrapper = styled.aside`
     transform: translateX(-17%) translateY(-3%);
     z-index: 1;
   }
-  &.submenu.hide { display: unset; }/*none*/
-  &.submenu.show { display: unset; }
-  & ul li{
+  &.submenu.hide {
+    display: unset;
+  } /*none*/
+  &.submenu.show {
+    display: unset;
+  }
+  & ul li {
     margin-top: 1rem;
   }
-  & .sublink{
+  & .sublink {
     border-bottom: 2px solid transparent;
     display: block;
     font-size: 1.3rem;
@@ -63,7 +66,7 @@ const SubmenuWrapper = styled.aside`
     text-align: left;
     width: fit-content;
   }
-  & .sublink:hover{
+  & .sublink:hover {
     border-bottom: 2px solid var(--clr-primary-9);
     cursor: pointer;
   }

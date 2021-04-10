@@ -3,12 +3,12 @@ import styled from 'styled-components'
 import { StaticImage } from 'gatsby-plugin-image'
 
 import { FaTimes } from 'react-icons/fa'
-import {Link} from "gatsby"
-import {links} from '../../../utils/constants'
+import { Link } from 'gatsby'
+import { links } from '../../../utils/constants'
 
 import SidebarSubmenu from './sidebarsubmenu'
 
-const Sidebar = ({isSidebarOpen, toggleSidebar}) => {
+const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
   return (
     <SidebarContainer>
       <aside
@@ -22,30 +22,32 @@ const Sidebar = ({isSidebarOpen, toggleSidebar}) => {
             alt="Logo"
             width={67}
           />
-          <button type="button" className="close-sidebar-btn" aria-label="Close sidebar" onClick={toggleSidebar}>
+          <button
+            type="button"
+            className="close-sidebar-btn"
+            aria-label="Close sidebar"
+            onClick={toggleSidebar}
+          >
             <FaTimes />
           </button>
         </div>
         <ul className="links">
           {/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */}
           {links.map((link, index) => {
-
             return (
-              <li key={index} onClick={toggleSidebar} onKeyPress={toggleSidebar}>
+              <li
+                key={index}
+                onClick={toggleSidebar}
+                onKeyPress={toggleSidebar}
+              >
                 {' '}
-                <Link to={link.url}>
-                  {link.text}
-                </Link>
-                <SidebarSubmenu links={link.links}/>
+                <Link to={link.url}>{link.text}</Link>
+                <SidebarSubmenu links={link.links} />
               </li>
-
             )
           })}
-          <li className="tel-wrapper">
-            PhoneNumber
-          </li>
-          <li>
-          </li>
+          <li className="tel-wrapper">PhoneNumber</li>
+          <li></li>
         </ul>
       </aside>
     </SidebarContainer>

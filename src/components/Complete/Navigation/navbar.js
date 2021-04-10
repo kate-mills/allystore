@@ -3,23 +3,21 @@ import styled from 'styled-components'
 import { StaticImage } from 'gatsby-plugin-image'
 
 import { FaBars } from 'react-icons/fa'
-import {Link} from "gatsby"
-import {links} from '../../../utils/constants'
-import {useGlobalContext} from '../../../context/app_context'
+import { Link } from 'gatsby'
+import { links } from '../../../utils/constants'
+import { useGlobalContext } from '../../../context/app_context'
 
 import NavSubmenu from './submenu'
 
-
-const Nav = ({toggleSidebar}) => {
+const Nav = ({ toggleSidebar }) => {
   const { openSubmenu } = useGlobalContext()
-  const displaySubmenu = (e)=>{
-    const page_name = e.target.textContent;           // I get this text
-    const tempBtn = e.target.getBoundingClientRect(); // I get object with coordinates
-    const center = (tempBtn.left + tempBtn.right)/2; // center of anilink
-    const bottom = (tempBtn.bottom - 3);             // bottom of anilink - 3px
-    openSubmenu(page_name, {center, bottom});
-  };
-
+  const displaySubmenu = e => {
+    const page_name = e.target.textContent // I get this text
+    const tempBtn = e.target.getBoundingClientRect() // I get object with coordinates
+    const center = (tempBtn.left + tempBtn.right) / 2 // center of anilink
+    const bottom = tempBtn.bottom - 3 // bottom of anilink - 3px
+    openSubmenu(page_name, { center, bottom })
+  }
 
   return (
     <NavContainer>
@@ -34,22 +32,27 @@ const Nav = ({toggleSidebar}) => {
               width={67}
             />
           </Link>
-          <button type="button" aria-label="Open sidebar" className="nav-opener" onClick={toggleSidebar}>
+          <button
+            type="button"
+            aria-label="Open sidebar"
+            className="nav-opener"
+            onClick={toggleSidebar}
+          >
             <FaBars />
           </button>
-            <NavSubmenu/>
+          <NavSubmenu />
         </div>
         <ul className="nav-links">
           {links.map((link, index) => {
             return (
               <li key={index}>
-                <Link to={link.url} onMouseOver={displaySubmenu}>{link.text}</Link>
+                <Link to={link.url} onMouseOver={displaySubmenu}>
+                  {link.text}
+                </Link>
               </li>
             )
           })}
-          <li>
-            Phone Number
-          </li>
+          <li>Phone Number</li>
         </ul>
       </div>
     </NavContainer>
