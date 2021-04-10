@@ -21,7 +21,16 @@ export const links = [
     text: 'shop',
     page: 'shop',
     url: '/shop',
-    links: [],
+    links: [
+     {
+        text: "Shop by Product Type",
+        url: "/product-type/",
+      }, 
+      {
+        text: "Shop by Skin Type",
+        url: "/skin-type/"
+      },
+    ],
   },
 ]
 

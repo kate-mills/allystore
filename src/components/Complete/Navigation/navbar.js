@@ -1,14 +1,26 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import { StaticImage } from 'gatsby-plugin-image'
-import { Link } from 'gatsby'
+
 import { FaBars } from 'react-icons/fa'
+import {Link} from "gatsby"
+import {links} from '../../../utils/constants'
+import {useGlobalContext} from '../../../context/app_context'
 
-import { links } from '../utils/constants'
-//import { useNavContext } from '../context/navigation_context'
+import NavSubmenu from './submenu'
 
-const Navbar = () => {
-  //const { openSidebar } = useNavContext()
+
+const Nav = ({toggleSidebar}) => {
+  const { openSubmenu } = useGlobalContext()
+  const displaySubmenu = (e)=>{
+    const page_name = e.target.textContent;           // I get this text
+    const tempBtn = e.target.getBoundingClientRect(); // I get object with coordinates
+    const center = (tempBtn.left + tempBtn.right)/2; // center of anilink
+    const bottom = (tempBtn.bottom - 3);             // bottom of anilink - 3px
+    openSubmenu(page_name, {center, bottom});
+  };
+
+
   return (
     <NavContainer>
       <div className="nav-center">
@@ -17,33 +29,29 @@ const Navbar = () => {
             <StaticImage
               placeholder="blurred"
               layout="fixed"
-              src="../images/icon.png"
+              src="../../../images/icon.png"
               alt="Logo"
               width={67}
             />
           </Link>
-          <button
-            type="button"
-            className="nav-toggle"
-            onClick={() => console.log('click')}
-            onKeyPress={() => console.log('click')}
-            aria-label="Open sidebar"
-          >
+          <button type="button" aria-label="Open sidebar" className="nav-opener" onClick={toggleSidebar}>
             <FaBars />
           </button>
-        </div>{' '}
-        {/* close nav-header */}
+            <NavSubmenu/>
+        </div>
         <ul className="nav-links">
-          {links.map(link => {
+          {links.map((link, index) => {
             return (
-              <li key={link.id}>
-                <Link to={link.url}>{link.text}</Link>
+              <li key={index}>
+                <Link to={link.url} onMouseOver={displaySubmenu}>{link.text}</Link>
               </li>
             )
           })}
+          <li>
+            Phone Number
+          </li>
         </ul>
-      </div>{' '}
-      {/* close nav-center */}
+      </div>
     </NavContainer>
   )
 }
@@ -114,5 +122,4 @@ const NavContainer = styled.nav`
     }
   }
 `
-
-export default Navbar
+export default Nav

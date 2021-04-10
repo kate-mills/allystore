@@ -3,10 +3,10 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 import { FaShoppingCart, FaUserPlus } from 'react-icons/fa'
 
-import { useNavigationContext } from '../context/navigation_context'
+import { useAppContext } from '../../../context/navigation_context'
 
 const CartButtons = className => {
-  const { closeSidebar } = useNavigationContext()
+  const { closeSidebar } = useAppContext()
   return (
     <div className={`${className} cart-btn-wrapper`}>
       {/* Shopping Cart*/}
