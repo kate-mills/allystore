@@ -25,8 +25,8 @@ const Navbar = () => {
           <button
             type="button"
             className="nav-toggle"
-            onClick={()=>console.log('click')}
-            onKeyPress={()=>console.log('click')}
+            onClick={() => console.log('click')}
+            onKeyPress={() => console.log('click')}
             aria-label="Open sidebar"
           >
             <FaBars />

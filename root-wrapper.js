@@ -1,11 +1,7 @@
-import React from "react"
+import React from 'react'
 
-import { AppProvider } from './src/context/app_context';
+import { AppProvider } from './src/context/app_context'
 
-export const wrapRootElement = ({element}) => {
-  return (
-    <AppProvider>
-      {element}
-    </AppProvider>
-  )
+export const wrapRootElement = ({ element }) => {
+  return <AppProvider>{element}</AppProvider>
 }

@@ -1,4 +1,4 @@
-require('dotenv').config({ path: `.env.${process.env.NODE_ENV}`, })
+require('dotenv').config({ path: `.env.${process.env.NODE_ENV}` })
 
 module.exports = {
   siteMetadata: {
@@ -45,5 +45,5 @@ module.exports = {
       resolve: `gatsby-plugin-styled-components`,
     },
   ],
-  flags: { DEV_SSR: false }
+  flags: { DEV_SSR: false },
 }

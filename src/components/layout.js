@@ -9,7 +9,7 @@ import Navbar from './navbar'
 const Layout = ({ children }) => {
   return (
     <>
-      <Navbar/>
+      <Navbar />
       <div
         className="page"
         style={{

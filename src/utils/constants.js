@@ -7,21 +7,21 @@ export const links = [
     text: 'home',
     page: 'home',
     url: '/',
-    links:[],
+    links: [],
   },
   {
     id: 2,
     text: 'about',
     page: 'about',
     url: '/about',
-    links:[],
+    links: [],
   },
   {
     id: 3,
     text: 'shop',
     page: 'shop',
     url: '/shop',
-    links:[],
+    links: [],
   },
 ]
 

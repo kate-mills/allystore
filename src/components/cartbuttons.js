@@ -5,7 +5,7 @@ import { FaShoppingCart, FaUserPlus } from 'react-icons/fa'
 
 import { useNavigationContext } from '../context/navigation_context'
 
-const CartButtons = (className) => {
+const CartButtons = className => {
   const { closeSidebar } = useNavigationContext()
   return (
     <div className={`${className} cart-btn-wrapper`}>
