@@ -5,7 +5,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 import { FaBars } from 'react-icons/fa'
 import { Link } from 'gatsby'
 import { links } from '../../../utils/constants'
-import CartButtons from './cartbuttons'
+import CartButtons from './CartBtns'
 import { useGlobalContext } from '../../../context/app_context'
 
 import NavSubmenu from './submenu'
@@ -75,7 +75,7 @@ const NavContainer = styled.nav`
       .nav-toggle {
         background: inherit;
         border-color: transparent;
-        color: var(--clr-primary-5);
+        color: var(--clr-primary-5d);
         cursor: pointer;
         svg {
           font-size: 2rem;

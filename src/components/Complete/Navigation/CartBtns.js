@@ -34,17 +34,16 @@ const CartButtonWrapper = styled.div`
     grid-template-columns: 1fr 1fr;
     width: 225px;
   }
-
   .cart-btn {
+    align-items: center;
     color: var(--clr-black);
+    display: flex;
     font-size: 1.5rem;
     letter-spacing: var(--spacing);
-    display: flex;
-    align-items: center;
   }
   .cart-container {
-    display: flex;
     align-items: center;
+    display: flex;
     position: relative;
     svg {
       height: 1.6rem;
@@ -52,28 +51,28 @@ const CartButtonWrapper = styled.div`
     }
   }
   .cart-value {
-    position: absolute;
-    top: -10px;
-    right: -16px;
-    background: var(--clr-primary-5);
-    width: 16px;
-    height: 16px;
-    display: flex;
     align-items: center;
-    justify-content: center;
+    background: var(--clr-primary-8);
     border-radius: 50%;
-    font-size: 0.75rem;
     color: var(--clr-white);
+    display: flex;
+    font-size: 0.75rem;
+    height: 16px;
+    justify-content: center;
     padding: 12px;
+    position: absolute;
+    right: -16px;
+    top: -10px;
+    width: 16px;
   }
   .auth-btn {
-    display: flex;
     align-items: center;
     background: transparent;
     border-color: transparent;
-    font-size: 1.5rem;
-    cursor: pointer;
     color: var(--clr-black);
+    cursor: pointer;
+    display: flex;
+    font-size: 1.5rem;
     letter-spacing: var(--spacing);
     svg {
       margin-left: 5px;

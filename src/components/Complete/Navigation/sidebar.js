@@ -7,6 +7,7 @@ import { Link } from 'gatsby'
 import { links } from '../../../utils/constants'
 
 import SidebarSubmenu from './sidebarsubmenu'
+import CartButtons from './CartBtns'
 
 const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
   return (
@@ -47,6 +48,7 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
             )
           })}
         </ul>
+        <CartButtons/>
       </aside>
     </SidebarContainer>
   )
@@ -54,9 +56,9 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
 
 const SidebarContainer = styled.div`
   .sidebar-header {
+    align-items: center;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 1rem 1.5rem;
   }
   .close-sidebar-btn {
@@ -68,51 +70,56 @@ const SidebarContainer = styled.div`
     outline: none;
     transition: var(--transition);
   }
-  .close-sidebar-btn:hover {
-    color: var(--darkGrey);
-  }
   .logo {
     justify-self: center;
-    width: 160px;
-    min-height: 60px;
     margin-bottom: 0;
+    min-height: 60px;
+    width: 160px;
   }
   .links {
     margin-bottom: 2rem;
   }
   .links a {
+    color: var(--clr-black);
     display: block;
-    text-align: left;
-    font-size: 1rem;
-    text-transform: capitalize;
-    padding: 1rem;
+    font-size: 1.2rem;
+    letter-spacing: var(--spacing);
     margin-left: 1.5rem;
     margin-right: 1.5rem;
-    color: var(--clr-black);
+    padding: 1rem;
+    text-align: left;
+    text-transform: capitalize;
     transition: var(--transition);
-    letter-spacing: var(--spacing);
   }
   .links a:hover {
-    padding: 1rem 1.5rem;
-    padding-left: 2rem;
-    background: var(--clr-primary-12);
+    background: var(--clr-grey-10);
     color: var(--clr-black);
+    padding: 1rem 1.5rem;
+    padding-left: 2.5rem;
   }
   .sidebar {
+    background: var(--clr-white);
+    height: 100%;
+    left: 0;
     position: fixed;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #f5f0f1;
     transition: var(--transition);
     transform: translate(-100%);
+    width: 100%;
     z-index: -1;
   }
   .show-sidebar {
-    background: var(--clr-primary-9);
     transform: translate(0);
     z-index: 999;
+    .cart-btn-wrapper{
+      margin-left: 2rem;
+      svg{
+        color: var(--clr-primary-1);
+      }
+      .cart-value{
+        background: var(--clr-primary-4);
+      }
+    }
   }
   @media screen and (min-width: 992px) {
     .sidebar {

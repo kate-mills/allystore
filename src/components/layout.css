@@ -25,6 +25,7 @@
   --clr-primary-10:hsl(252deg 16% 94%);
   --clr-primary-11: hsl(252deg 20% 95%);
   --clr-primary-12: hsl(201deg 55% 38% / 7%);
+  --clr-primary-13: #f5f0f1;
   /* dark grey - headings*/
   --clr-grey-1: #343a40;
   --clr-grey-2: #6c757d;
@@ -38,12 +39,12 @@
   --clr-grey-9: #f5f5f5;
   --clr-grey-10:#FAFAFA; 
   /* Fonts*/
-  --font-body: neue-haas-grotesk-display, Montserrat;
+  --font-body: alga, serif;
   --font-cursive:beloved-script, sans-serif;
   --font-title :beloved-sans, sans-serif;
   --font-weight-body: 400;
   --font-weight-cursive: 400;
-  --font-weight-title: 500;
+  --font-weight-title: 400;
   /* Line Height*/
   --line-height-body: 1.8rem;
   --line-height-heading: 1.4em;
