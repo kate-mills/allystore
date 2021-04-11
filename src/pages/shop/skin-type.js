@@ -1,12 +1,10 @@
-/* eslint react/jsx-pascal-case: "off" */
-
 import * as React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
-import { SEO, Layout } from '../../components'
+import { Seo, Layout } from '../../components'
 
 const ShopSkinTypePage = () => (
   <Layout>
-    <SEO title="Shop by Skin Type" />
+    <Seo title="Shop by Skin Type" />
     <StaticImage
       src="../../images/icon.png"
       width={300}

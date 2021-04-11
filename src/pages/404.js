@@ -1,14 +1,12 @@
-/* eslint react/jsx-pascal-case: "off" */
-
 import * as React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
-import { SEO, Layout } from '../components'
+import { Seo, Layout } from '../components'
 
 const ErrorPage = () => {
   return (
     <Layout>
-      <SEO title="Opps!" />
+      <Seo title="Opps!" />
       <Wrapper className="page-100">
         <section>
           <h1>Oops!</h1>
