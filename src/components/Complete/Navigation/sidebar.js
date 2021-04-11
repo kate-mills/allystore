@@ -48,7 +48,7 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
             )
           })}
         </ul>
-        <CartButtons/>
+        <CartButtons />
       </aside>
     </SidebarContainer>
   )
@@ -111,12 +111,12 @@ const SidebarContainer = styled.div`
   .show-sidebar {
     transform: translate(0);
     z-index: 999;
-    .cart-btn-wrapper{
+    .cart-btn-wrapper {
       margin-left: 2rem;
-      svg{
+      svg {
         color: var(--clr-primary-1);
       }
-      .cart-value{
+      .cart-value {
         background: var(--clr-primary-4);
       }
     }
