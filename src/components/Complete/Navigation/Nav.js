@@ -8,7 +8,7 @@ import { links } from '../../../utils/constants'
 import CartButtons from './CartBtns'
 import { useGlobalContext } from '../../../context/app_context'
 
-import NavSubmenu from './submenu'
+import NavSubmenu from './NavSubmenu'
 
 const Navbar = ({ toggleSidebar }) => {
   const { openSubmenu } = useGlobalContext()

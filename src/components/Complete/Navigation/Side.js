@@ -6,7 +6,7 @@ import { FaTimes } from 'react-icons/fa'
 import { Link } from 'gatsby'
 import { links } from '../../../utils/constants'
 
-import SidebarSubmenu from './sidebarsubmenu'
+import SidebarSubmenu from './SideSubmenu'
 import CartButtons from './CartBtns'
 
 const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
