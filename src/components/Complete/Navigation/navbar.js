@@ -30,7 +30,7 @@ const Navbar = ({ toggleSidebar }) => {
               layout="fixed"
               src="../../../images/icon.png"
               alt="Logo"
-              width={77}
+              width={70}
             />
           </Link>
           <button type="button" className="nav-toggle" onClick={toggleSidebar}>
@@ -70,7 +70,7 @@ const NavContainer = styled.nav`
       display: flex;
       justify-content: space-between;
       img {
-        height: 77px;
+        height: 70px;
       }
       .nav-toggle {
         background: inherit;
