@@ -24,11 +24,11 @@ export const links = [
     links: [
       {
         text: 'Shop by Product Type',
-        url: '/product-type/',
+        url: '/shop/product-type/',
       },
       {
         text: 'Shop by Skin Type',
-        url: '/skin-type/',
+        url: '/shop/skin-type/',
       },
     ],
   },

@@ -88,15 +88,15 @@ const SidebarContainer = styled.div`
     padding: 1rem;
     margin-left: 1.5rem;
     margin-right: 1.5rem;
-    color: var(--black);
+    color: var(--clr-black);
     transition: var(--transition);
     letter-spacing: var(--spacing);
   }
   .links a:hover {
     padding: 1rem 1.5rem;
     padding-left: 2rem;
-    background: var(--clr-primary-11);
-    color: var(--black);
+    background: var(--clr-primary-12);
+    color: var(--clr-black);
   }
   .sidebar {
     position: fixed;

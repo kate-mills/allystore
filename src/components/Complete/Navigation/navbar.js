@@ -30,7 +30,7 @@ const Navbar = ({ toggleSidebar }) => {
               layout="fixed"
               src="../../../images/icon.png"
               alt="Logo"
-              width={67}
+              width={77}
             />
           </Link>
           <button type="button" className="nav-toggle" onClick={toggleSidebar}>
@@ -56,33 +56,34 @@ const Navbar = ({ toggleSidebar }) => {
 }
 
 const NavContainer = styled.nav`
-  height: 5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  .nav-center {
-    width: 90vw;
-    margin: 0 auto;
-    max-width: var(--max-width);
-  }
-  .nav-header {
-    display: flex;
+  & {
     align-items: center;
-    justify-content: space-between;
-    img {
-      height: 67px;
+    display: flex;
+    height: 7rem;
+    justify-content: center;
+  }
+  & .nav-center {
+    max-width: var(--max-width);
+    width: 90vw;
+    .nav-header {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      img {
+        height: 77px;
+      }
+      .nav-toggle {
+        background: inherit;
+        border-color: transparent;
+        color: var(--clr-primary-5);
+        cursor: pointer;
+        svg {
+          font-size: 2rem;
+        }
+      }
     }
   }
-  & .nav-toggle {
-    background: transparent;
-    border: none;
-    color: var(--clr-primary-5);
-    cursor: pointer;
-    svg {
-      font-size: 2rem;
-    }
-  }
-  .nav-links {
+  & .nav-links {
     display: none;
   }
   .cart-btn-wrapper {
@@ -92,27 +93,27 @@ const NavContainer = styled.nav`
     .nav-toggle {
       display: none;
     }
-    .nav-center {
+    & .nav-center {
+      align-items: center;
       display: grid;
       grid-template-columns: auto 1fr auto;
-      align-items: center;
     }
-    .nav-links {
+    & .nav-links {
       display: flex;
       justify-content: center;
       li {
         margin: 0 0.5rem;
       }
       a {
-        color: var(--clr-grey-3);
+        color: var(--clr-black);
         font-size: 1.3rem;
         letter-spacing: var(--spacing);
         line-height: normal;
         padding: 0.5rem;
         text-transform: capitalize;
         &:hover {
-          cursor: pointer;
           border-bottom: 2px solid var(--clr-primary-9);
+          cursor: pointer;
         }
       }
     }
