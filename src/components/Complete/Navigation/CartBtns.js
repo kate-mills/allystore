@@ -3,10 +3,10 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 import { FaShoppingCart, FaUserPlus } from 'react-icons/fa'
 
-import { useGlobalContext } from '../../../context/app_context'
+import { useAppContext } from '../../../context/app_context'
 
 const CartButtons = () => {
-  const { closeSidebar } = useGlobalContext()
+  const { closeSidebar } = useAppContext()
   return (
     <CartButtonWrapper className={`cart-btn-wrapper`}>
       {/* Shopping Cart*/}

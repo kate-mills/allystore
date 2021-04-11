@@ -6,12 +6,12 @@ import { FaBars } from 'react-icons/fa'
 import { Link } from 'gatsby'
 import { links } from '../../../utils/constants'
 import CartButtons from './CartBtns'
-import { useGlobalContext } from '../../../context/app_context'
+import { useAppContext } from '../../../context/app_context'
 
 import NavSubmenu from './NavSubmenu'
 
 const Navbar = ({ toggleSidebar }) => {
-  const { openSubmenu } = useGlobalContext()
+  const { openSubmenu } = useAppContext()
   const displaySubmenu = e => {
     const page_name = e.target.textContent // I get this text
     const tempBtn = e.target.getBoundingClientRect() // I get object with coordinates

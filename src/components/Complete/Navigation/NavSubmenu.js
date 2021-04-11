@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
-import { useGlobalContext } from '../../../context/app_context'
+import { useAppContext } from '../../../context/app_context'
 
 const Submenu = () => {
   const {
@@ -9,7 +9,7 @@ const Submenu = () => {
     closeSubmenu,
     page: { page, links },
     location,
-  } = useGlobalContext()
+  } = useAppContext()
   const container = useRef(null)
 
   useEffect(() => {
